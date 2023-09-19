@@ -140,9 +140,9 @@ footer span {
   width: 100%;
 }
 
+/* tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-  body {
-  }
+  body {}
 
   .hero {
     margin-bottom: 200px;
@@ -196,11 +196,13 @@ footer span {
     display: flex;
     flex-direction: row;
   }
+
   .footer-image-container {
     position: relative;
     width: 100%;
     overflow: hidden;
   }
+
   .footer-image {
     width: 100%;
   }
@@ -211,12 +213,14 @@ footer span {
   }
 }
 
-@media (min-width: 1024px) {
+/* desktop view */
+
+@media (min-width: 1200px) {
   body {
+    width: 100%;
   }
 
   .hero {
-    margin-left: 60px;
     margin-top: 50px;
     display: flex;
   }
@@ -228,6 +232,7 @@ footer span {
 
   .hero-img {
     width: 500px;
+    z-index: 1;
   }
 
   .img-container {
@@ -236,9 +241,10 @@ footer span {
 
   .content {
     position: absolute;
+    height: auto;
     margin-right: 50px;
     margin-left: 20px;
-    z-index: -99999;
+    z-index: -1;
   }
 
   .content-text {
@@ -247,44 +253,60 @@ footer span {
     margin-top: 50px;
     margin-left: 400px;
     overflow: hidden;
-    height: 200px;
+    height: fit-content;
+    max-height: fit-content;
     background-color: white;
     box-shadow: 5px 5px 5px rgb(139, 138, 138);
     color: black;
     padding: 100px;
   }
+
   .img-text {
     font-size: 100px;
   }
 
   .work-content {
     margin: 50px;
+    margin-top: 10%;
   }
+
 
   .posts {
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 100px;
+  }
+
+  .hero-icons {
+    float: right;
   }
 
   .post {
+    display: flex;
+    flex: 1 1 auto;
+    overflow-y: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: 550px;
     height: 500px;
+    max-height: 600px;
   }
 
   .post-top {
     height: 300px;
   }
+
   .post-bottom {
     height: 200px;
-  }
-
-  .post-bottom p {
+    max-width: 300px;
   }
 
   footer {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
     align-items: center;
   }
 
@@ -292,6 +314,7 @@ footer span {
     width: 70%;
     text-align: center;
   }
+
   .footer-image-container {
     width: 100%;
     overflow: hidden;
@@ -303,11 +326,13 @@ footer span {
     width: 100%;
     overflow: hidden;
   }
+
   .footer-image {
     position: absolute;
     bottom: -325px;
     width: 100%;
   }
+
   .footer-icons {
     justify-content: center;
   }
